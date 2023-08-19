@@ -16,8 +16,6 @@ docker-compose up -d
 べた書きでよさそう
 
 - なまえ
-- 年齢（けいさん）
-- 経験年数（けいさん）
 - github
 - qiita？
 - Kaggle？
@@ -64,3 +62,4 @@ json でもつ
 べた書き
 
 yarn add sass
+yarn add @chakra-ui/react @chakra-ui/next-js @emotion/react @emotion/styled framer-motion
