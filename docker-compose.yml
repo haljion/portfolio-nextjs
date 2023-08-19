@@ -9,5 +9,5 @@ services:
     volumes:
       - ./src:/app
     environment:
-     - WATCHPACK_POLLING=true
+      - WATCHPACK_POLLING=true
     command: bash -c "yarn dev"

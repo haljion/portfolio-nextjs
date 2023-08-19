@@ -7,11 +7,12 @@ docker-compose run --rm app sh -c 'npx create-next-app src --typescript'
 docker-compose up -d
 
 # Portfolio-Next
-- DB使うほどでもないしフロント+jsonでよさそう
-- 場合によってはs3にjson配置
 
+- DB 使うほどでもないしフロント+json でよさそう
+- 場合によっては s3 に json 配置
 
 ## 基本情報
+
 べた書きでよさそう
 
 - なまえ
@@ -23,6 +24,7 @@ docker-compose up -d
 - 資格（取得年月？）
 
 ## スキル
+
 - 言語ごとってよりはジャンル別？
 - 設計とかマネジメントスキルもほしい
 - 使える技術
@@ -34,25 +36,31 @@ docker-compose up -d
   - インフラ
   - その他
 
-jsonでもつ？
+json でもつ？
 
 ## 職務経歴
+
 - ざっくり
 - 使用スキルセット
 - 期間
 - 概要
 - 担当作業
 
-jsonでもつ
+json でもつ
 
 ## 作ったもの
-- リンクあればURL
-- gitのURL
+
+- リンクあれば URL
+- git の URL
   - ポケアプリリリースするかあ
 
-jsonでもつ
-## 自己PR
-- AIの勉強内容とか？
+json でもつ
+
+## 自己 PR
+
+- AI の勉強内容とか？
 - 読んだ本とか？
 
 べた書き
+
+yarn add sass
