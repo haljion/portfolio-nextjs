@@ -29,30 +29,9 @@ import {
 
 import Image from 'next/image'
 
-// import json from 'json/certification'
+import { productList } from '../../consts/pageData'
 
 const Products: NextPage = () => {
-  const ProductList = [
-    {
-      id: 1,
-      name: 'PokeManage',
-      img: '/img/product_sample.jpg',
-      detail: 'ポケモンの個体管理アプリ',
-      skill: ['Next.js', 'React.js', 'TypeScript', 'Django Rest Framework', 'Python', 'AWS'],
-      git: 'aaa',
-      url: 'aaa',
-    },
-    {
-      id: 2,
-      name: 'PokeManage',
-      img: '/img/product_sample.jpg',
-      detail: 'ポケモンの個体管理アプリ',
-      skill: ['Next.js', 'React.js', 'JavaScript', 'Python'],
-      git: '',
-      url: '',
-    },
-  ]
-
   return (
     <>
       <VStack>
@@ -60,7 +39,7 @@ const Products: NextPage = () => {
           Products
         </Heading>
         <HStack>
-          {ProductList.map((product) => {
+          {productList.map((product) => {
             return (
               <Card>
                 <CardHeader>

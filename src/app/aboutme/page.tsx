@@ -16,49 +16,97 @@ import {
   Stack,
   HStack,
   VStack,
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  Tag,
+  TagLabel,
+  TagLeftIcon,
+  TagRightIcon,
+  TagCloseButton,
 } from '@chakra-ui/react'
 
-// import json from 'json/certification'
+import { certificationList, skillList } from '../../consts/pageData'
 
 const AboutMe: NextPage = () => {
-  const certificationList = [
-    { id: 1, name: 'Java Silver 8', acquisitionDate: '2018/06', icon: 'ChatIcon' },
-    { id: 2, name: '統計検定 2級', acquisitionDate: '2022/10' },
-    { id: 3, name: 'Python データ分析エンジニア認定試験', acquisitionDate: '2023/04' },
-  ]
-
   return (
     <>
       <VStack>
-        <Avatar size="2xl" name="haljion" src="/img/icon.png"></Avatar>
-        <HStack>
-          <Avatar
-            size="lg"
-            name="git"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-          ></Avatar>
-          <Avatar size="lg" name="qiita" src="/img/icon.png"></Avatar>
-          <Avatar
-            size="lg"
-            name="kaggle"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kaggle/kaggle-original-wordmark.svg"
-          ></Avatar>
-        </HStack>
         <Heading as="h2" size="3xl" noOfLines={1}>
           About me
         </Heading>
-        <Text>ペラペラ</Text>
-        <Text>資格</Text>
-        <List>
-          {certificationList.map((c) => {
-            return (
-              <ListItem>
-                <ListIcon as={c.icon} color="green.500" />
-                {c.name}({c.acquisitionDate})
-              </ListItem>
-            )
-          })}
-        </List>
+        <Card>
+          <CardHeader>
+            <Heading size="md">Profile</Heading>
+          </CardHeader>
+          <CardBody>
+            <VStack>
+              <Avatar size="2xl" name="haljion" src="/img/icon.png"></Avatar>
+              <Text>@haljion</Text>
+              <HStack>
+                <Avatar
+                  size="md"
+                  name="git"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                ></Avatar>
+                <Avatar size="md" name="qiita" src="/img/icon.png"></Avatar>
+                <Avatar
+                  size="md"
+                  name="kaggle"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kaggle/kaggle-original-wordmark.svg"
+                ></Avatar>
+              </HStack>
+            </VStack>
+          </CardBody>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <Heading size="md">About</Heading>
+          </CardHeader>
+          <CardBody>
+            <Text>ペラペラ</Text>
+          </CardBody>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <Heading size="md">資格</Heading>
+          </CardHeader>
+          <CardBody>
+            <List>
+              {certificationList.map((c) => {
+                return (
+                  <ListItem>
+                    <ListIcon as={c.icon} color="green.500" />
+                    {c.name}({c.acquisitionDate})
+                  </ListItem>
+                )
+              })}
+            </List>
+          </CardBody>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <Heading size="md">スキル</Heading>
+          </CardHeader>
+          <CardBody>
+            <List>
+              {skillList.map((skill) => {
+                return (
+                  <HStack>
+                    <Tag size="md" variant="solid" colorScheme="teal">
+                      <TagLeftIcon as={skill.icon} />
+                      <TagLabel>{skill.name}</TagLabel>
+                    </Tag>
+                  </HStack>
+                )
+              })}
+            </List>
+          </CardBody>
+        </Card>
       </VStack>
     </>
   )

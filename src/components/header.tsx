@@ -36,9 +36,6 @@ const Header: NextPage = () => {
       <Button href="/aboutme" colorScheme="teal" as="a">
         about me
       </Button>
-      <Button href="/skill" colorScheme="teal" as="a">
-        skill
-      </Button>
       <Button href="/career" colorScheme="teal" as="a">
         career
       </Button>
