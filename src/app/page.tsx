@@ -1,6 +1,8 @@
 'use client'
 import type { NextPage } from 'next'
-import { Heading, Box, Button, Text, Avatar, Stack, HStack, VStack } from '@chakra-ui/react'
+import React from 'react'
+
+import { VStack, Text, Box, Button } from '../components/common'
 
 const Home: NextPage = () => {
   return (

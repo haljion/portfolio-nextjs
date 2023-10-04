@@ -4,11 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "build": "next build"
   },
   "dependencies": {
+    "@chakra-ui/icons": "^2.1.1",
     "@chakra-ui/next-js": "^2.1.5",
     "@chakra-ui/react": "^2.8.0",
     "@emotion/react": "^11.11.1",

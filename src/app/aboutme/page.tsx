@@ -3,30 +3,22 @@
 import type { NextPage } from 'next'
 
 import {
+  Card,
+  CardBody,
+  CardHeader,
+  HStack,
   Heading,
-  Box,
-  Button,
+  Tag,
+  VStack,
   Text,
   Avatar,
   List,
-  ListItem,
   ListIcon,
-  OrderedList,
-  UnorderedList,
-  Stack,
-  HStack,
-  VStack,
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Tag,
+  ListItem,
   TagLabel,
   TagLeftIcon,
-  TagRightIcon,
-  TagCloseButton,
-} from '@chakra-ui/react'
-
+  ChatIcon,
+} from '../../components/common'
 import { certificationList, skillList } from '../../consts/pageData'
 
 const AboutMe: NextPage = () => {
@@ -79,7 +71,7 @@ const AboutMe: NextPage = () => {
               {certificationList.map((c) => {
                 return (
                   <ListItem>
-                    <ListIcon as={c.icon} color="green.500" />
+                    <ListIcon as={ChatIcon} color="green.500" />
                     {c.name}({c.acquisitionDate})
                   </ListItem>
                 )
@@ -98,7 +90,6 @@ const AboutMe: NextPage = () => {
                 return (
                   <HStack>
                     <Tag size="md" variant="solid" colorScheme="teal">
-                      <TagLeftIcon as={skill.icon} />
                       <TagLabel>{skill.name}</TagLabel>
                     </Tag>
                   </HStack>

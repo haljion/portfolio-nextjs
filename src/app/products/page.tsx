@@ -1,35 +1,21 @@
 'use client'
 
-import type { NextPage } from 'next'
-
-import {
-  Heading,
-  Box,
-  Button,
-  Text,
-  Avatar,
-  List,
-  ListItem,
-  ListIcon,
-  OrderedList,
-  UnorderedList,
-  Stack,
-  HStack,
-  VStack,
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Tag,
-  TagLabel,
-  TagLeftIcon,
-  TagRightIcon,
-  TagCloseButton,
-} from '@chakra-ui/react'
-
 import Image from 'next/image'
+import type { NextPage } from 'next'
+import React from 'react'
 
 import { productList } from '../../consts/pageData'
+import {
+  Card,
+  CardBody,
+  CardFooter,
+  CardHeader,
+  HStack,
+  Heading,
+  Tag,
+  VStack,
+  Text,
+} from '../../components/common'
 
 const Products: NextPage = () => {
   return (

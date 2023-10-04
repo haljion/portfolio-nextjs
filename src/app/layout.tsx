@@ -1,7 +1,9 @@
-import { Providers } from './providers'
+import { ReactNode } from 'react'
+
+import { Providers } from '../components/common/providers'
 import Header from '../components/header'
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
     <html lang="ja">
       <body>
@@ -13,3 +15,5 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   )
 }
+
+export default RootLayout

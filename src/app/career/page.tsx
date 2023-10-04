@@ -1,33 +1,19 @@
 'use client'
 
 import type { NextPage } from 'next'
-
-import {
-  Heading,
-  Box,
-  Button,
-  Text,
-  Avatar,
-  List,
-  ListItem,
-  ListIcon,
-  OrderedList,
-  UnorderedList,
-  Stack,
-  HStack,
-  VStack,
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Tag,
-  TagLabel,
-  TagLeftIcon,
-  TagRightIcon,
-  TagCloseButton,
-} from '@chakra-ui/react'
+import React from 'react'
 
 import { careerList } from '../../consts/pageData'
+import {
+  Card,
+  CardBody,
+  CardHeader,
+  HStack,
+  Heading,
+  Tag,
+  VStack,
+  Text,
+} from '../../components/common'
 
 const Career: NextPage = () => {
   return (

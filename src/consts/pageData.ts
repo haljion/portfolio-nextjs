@@ -1,27 +1,87 @@
+// 資格
 export const certificationList = [
-  { id: 1, name: 'Java Silver 8', acquisitionDate: '2018/06', icon: 'ChatIcon' },
+  { id: 1, name: 'Java Silver 8', acquisitionDate: '2018/06' },
   { id: 2, name: '統計検定 2級', acquisitionDate: '2022/10' },
   { id: 3, name: 'Python データ分析エンジニア認定試験', acquisitionDate: '2023/04' },
 ]
 
+// スキル TODO:カテゴリで分ける
 export const skillList = [
   {
     id: 1,
     name: 'Java',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg',
   },
   {
     id: 2,
     name: 'JavaScript',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
   },
   {
     id: 3,
     name: 'TypeScript',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
+  },
+  {
+    id: 4,
+    name: 'C#',
+  },
+  {
+    id: 5,
+    name: 'Kotlin',
+  },
+  {
+    id: 6,
+    name: 'Python',
+  },
+  {
+    id: 3,
+    name: 'PHP',
+  },
+  {
+    id: 3,
+    name: 'Laravel',
+  },
+  {
+    id: 3,
+    name: 'Spring Boot',
+  },
+  {
+    id: 3,
+    name: 'jQuery',
+  },
+  {
+    id: 3,
+    name: 'Angular',
+  },
+  {
+    id: 3,
+    name: 'React.js',
+  },
+  {
+    id: 3,
+    name: 'Next.js',
+  },
+  {
+    id: 3,
+    name: 'ASP.NET Core',
+  },
+  {
+    id: 3,
+    name: 'Django',
+  },
+  {
+    id: 3,
+    name: 'Django Rest Framework',
+  },
+  {
+    id: 3,
+    name: 'Flask',
+  },
+  {
+    id: 3,
+    name: 'scikit-learn',
   },
 ]
 
+// 経歴
 export const careerList = [
   {
     id: 1,
@@ -113,6 +173,7 @@ export const careerList = [
   },
 ]
 
+// 制作物
 export const productList = [
   {
     id: 1,
@@ -125,11 +186,11 @@ export const productList = [
   },
   {
     id: 2,
-    name: 'PokeManage',
+    name: 'Portfolio',
     img: '/img/product_sample.jpg',
-    detail: 'ポケモンの個体管理アプリ',
-    skill: ['Next.js', 'React.js', 'JavaScript', 'Python'],
-    git: '',
+    detail: 'ポートフォリオサイト',
+    skill: ['Next.js', 'React.js', 'TypeScript', 'Docker'],
+    git: 'https://github.com/haljion/portfolio-nextjs',
     url: '',
   },
 ]
