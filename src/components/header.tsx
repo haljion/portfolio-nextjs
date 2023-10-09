@@ -29,7 +29,7 @@ import {
 
 const Header: NextPage = () => {
   return (
-    <HStack>
+    <HStack h="100%" w="100%">
       <Button href="/" colorScheme="teal" as="a">
         top
       </Button>

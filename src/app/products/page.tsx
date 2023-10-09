@@ -15,34 +15,52 @@ import {
   Tag,
   VStack,
   Text,
+  SimpleGrid,
+  Box,
 } from '../../components/common'
 
 const Products: NextPage = () => {
   return (
     <>
       <VStack>
-        <Heading as="h2" size="3xl" noOfLines={1}>
+        <Heading as="h2" size="3xl" noOfLines={1} color={'teal.800'}>
           Products
         </Heading>
-        <HStack>
-          {productList.map((product) => {
+        <SimpleGrid columns={{ lg: 2, md: 1 }} spacingX="20px" spacingY="20px">
+          {productList.map((product, index) => {
             return (
-              <Card>
+              <Card key={index}>
                 <CardHeader>
-                  <Heading size="md">{product.name}</Heading>
+                  <VStack>
+                    <Heading as="h3" size="lg">
+                      {product.name}
+                    </Heading>
+                    <Text fontSize="md">Webアプリケーション</Text>
+                  </VStack>
                 </CardHeader>
                 <Image src={product.img} alt={product.name} width={1920} height={800} />
                 <CardBody>
-                  <Text>{product.detail}</Text>
-                  <HStack>
-                    {product.skill.map((s) => {
-                      return (
-                        <Tag size="md" variant="solid" colorScheme="teal">
-                          {s}
-                        </Tag>
-                      )
-                    })}
-                  </HStack>
+                  <Box padding={'10px'}>
+                    <Heading as="h4" size="md">
+                      概要
+                    </Heading>
+                    <Text>{product.detail}</Text>
+                  </Box>
+
+                  <Box padding={'10px'}>
+                    <Heading as="h4" size="md">
+                      使用技術
+                    </Heading>
+                    <HStack>
+                      {product.skill.map((s) => {
+                        return (
+                          <Tag size="md" variant="solid" colorScheme="teal">
+                            {s}
+                          </Tag>
+                        )
+                      })}
+                    </HStack>
+                  </Box>
                 </CardBody>
 
                 <CardFooter>
@@ -54,7 +72,7 @@ const Products: NextPage = () => {
               </Card>
             )
           })}
-        </HStack>
+        </SimpleGrid>
       </VStack>
     </>
   )
