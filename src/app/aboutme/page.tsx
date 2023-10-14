@@ -18,51 +18,33 @@ import {
   TagLabel,
   TagLeftIcon,
   ChatIcon,
+  SimpleGrid,
+  Box,
+  Button,
+  ButtonGroup,
 } from '../../components/common'
 import { certificationList, skillList } from '../../consts/pageData'
+import { useRouter } from 'next/navigation'
 
 const AboutMe: NextPage = () => {
+  const router = useRouter()
   return (
     <>
       <VStack>
-        <Heading as="h2" size="3xl" noOfLines={1}>
+        <Heading as="h2" size="3xl" noOfLines={1} color={'teal.800'}>
           About me
         </Heading>
-        <Card>
+        <Card w="100%">
           <CardHeader>
-            <Heading size="md">Profile</Heading>
+            <Heading size="md">略歴</Heading>
           </CardHeader>
           <CardBody>
-            <VStack>
-              <Avatar size="2xl" name="haljion" src="/img/icon.png"></Avatar>
-              <Text>@haljion</Text>
-              <HStack>
-                <Avatar
-                  size="md"
-                  name="git"
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-                ></Avatar>
-                <Avatar size="md" name="qiita" src="/img/icon.png"></Avatar>
-                <Avatar
-                  size="md"
-                  name="kaggle"
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kaggle/kaggle-original-wordmark.svg"
-                ></Avatar>
-              </HStack>
-            </VStack>
+            <Text>2018年よりWebアプリケーション開発を中心としたエンジニアとして活動。</Text>
+            <Text>直近では機械学習の分野に興味を持ち、積極的に学習中。</Text>
           </CardBody>
         </Card>
 
-        <Card>
-          <CardHeader>
-            <Heading size="md">About</Heading>
-          </CardHeader>
-          <CardBody>
-            <Text>ペラペラ</Text>
-          </CardBody>
-        </Card>
-
-        <Card>
+        <Card w="100%">
           <CardHeader>
             <Heading size="md">資格</Heading>
           </CardHeader>
@@ -80,22 +62,64 @@ const AboutMe: NextPage = () => {
           </CardBody>
         </Card>
 
-        <Card>
+        <Card w="100%">
           <CardHeader>
             <Heading size="md">スキル</Heading>
           </CardHeader>
           <CardBody>
-            <List>
-              {skillList.map((skill) => {
-                return (
-                  <HStack>
+            <Box padding={'10px'}>
+              <Heading as="h5" size="sm">
+                業務経験あり
+              </Heading>
+              <SimpleGrid minChildWidth="100px" spacingX="10px" spacingY="5px">
+                {skillList.map((skill) => {
+                  return skill.id == 1 ? (
                     <Tag size="md" variant="solid" colorScheme="teal">
                       <TagLabel>{skill.name}</TagLabel>
                     </Tag>
-                  </HStack>
-                )
-              })}
-            </List>
+                  ) : (
+                    <></>
+                  )
+                })}
+              </SimpleGrid>
+            </Box>
+            <Box padding={'10px'}>
+              <Heading as="h5" size="sm">
+                使用経験あり
+              </Heading>
+              <SimpleGrid minChildWidth="100px" spacingX="10px" spacingY="5px">
+                {skillList.map((skill) => {
+                  return skill.id == 2 ? (
+                    <Tag size="md" variant="solid" colorScheme="teal">
+                      <TagLabel>{skill.name}</TagLabel>
+                    </Tag>
+                  ) : (
+                    <></>
+                  )
+                })}
+              </SimpleGrid>
+            </Box>
+          </CardBody>
+        </Card>
+
+        <Card w="100%">
+          <CardHeader>
+            <Heading size="md">各種リンク</Heading>
+          </CardHeader>
+          <CardBody>
+            <Box display="flex" alignItems="center" justifyContent="center" width="100%" py={12}>
+              <ButtonGroup gap="4">
+                <Button href="https://github.com/haljion" colorScheme="teal" as="a">
+                  Github
+                </Button>
+                <Button href="https://qiita.com/haljion" colorScheme="teal" as="a">
+                  Qiita
+                </Button>
+                <Button href="https://www.kaggle.com/haljion" colorScheme="teal" as="a">
+                  Kaggle
+                </Button>
+              </ButtonGroup>
+            </Box>
           </CardBody>
         </Card>
       </VStack>

@@ -2,6 +2,8 @@
 
 import type { NextPage } from 'next'
 
+import { usePathname } from 'next/navigation'
+
 import {
   Heading,
   Box,
@@ -25,24 +27,48 @@ import {
   TagLeftIcon,
   TagRightIcon,
   TagCloseButton,
+  Center,
+  ButtonGroup,
 } from '@chakra-ui/react'
 
 const Header: NextPage = () => {
+  const pathname = usePathname()
+
   return (
-    <HStack h="100%" w="100%">
-      <Button href="/" colorScheme="teal" as="a">
-        top
-      </Button>
-      <Button href="/aboutme" colorScheme="teal" as="a">
-        about me
-      </Button>
-      <Button href="/career" colorScheme="teal" as="a">
-        career
-      </Button>
-      <Button href="/products" colorScheme="teal" as="a">
-        products
-      </Button>
-    </HStack>
+    <>
+      {pathname == '/' ? (
+        <></>
+      ) : (
+        <Box
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+          width="100%"
+          py={12}
+          h="100px"
+          w="100%"
+          bg={'teal.800'}
+        >
+          <ButtonGroup gap="4">
+            <Button href="/" colorScheme="teal" as="a">
+              TOP
+            </Button>
+            <Button href="/aboutme" colorScheme="teal" as="a">
+              about me
+            </Button>
+            <Button href="/career" colorScheme="teal" as="a">
+              career
+            </Button>
+            <Button href="/study" colorScheme="teal" as="a">
+              study
+            </Button>
+            <Button href="/products" colorScheme="teal" as="a">
+              products
+            </Button>
+          </ButtonGroup>
+        </Box>
+      )}
+    </>
   )
 }
 

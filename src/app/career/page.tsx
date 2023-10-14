@@ -15,6 +15,7 @@ import {
   Text,
   Box,
   SimpleGrid,
+  Stack,
 } from '../../components/common'
 
 const Career: NextPage = () => {
@@ -23,58 +24,58 @@ const Career: NextPage = () => {
       <Heading as="h2" size="3xl" noOfLines={1} color={'teal.800'}>
         Career
       </Heading>
-      <SimpleGrid columns={{ lg: 2, md: 1 }} spacingX="20px" spacingY="20px">
+      <VStack m="20px">
         {careerList.map((career, index) => {
           return (
-            <Card align="normal" key={index}>
+            <Card w="100%" key={index}>
               <CardHeader>
-                <VStack>
-                  <Heading as="h3" size="lg">
+                <VStack align="nomal">
+                  <Heading as="h4" size="md">
                     {career.name}
                   </Heading>
                   <Text fontSize="md">{career.period}</Text>
                 </VStack>
               </CardHeader>
               <CardBody>
-                <Box padding={'10px'}>
-                  <Heading as="h4" size="md">
+                <Box m="10px">
+                  <Heading as="h5" size="sm">
                     概要
                   </Heading>
                   <Text>{career.detail}</Text>
                 </Box>
-                <Box padding={'10px'}>
-                  <Heading as="h4" size="md">
+                <Box m="10px">
+                  <Heading as="h5" size="sm">
                     担当工程
                   </Heading>
-                  <HStack>
+                  <Box>
                     {career.process.map((p) => {
                       return (
-                        <Tag size="md" variant="solid" colorScheme="teal">
+                        <Tag size="md" variant="solid" colorScheme="teal" m="5px">
                           {p}
                         </Tag>
                       )
                     })}
-                  </HStack>
+                  </Box>
                 </Box>
-                <Box padding={'10px'}>
-                  <Heading as="h4" size="md">
+                <Box m="10px">
+                  <Heading as="h5" size="sm">
                     使用技術
                   </Heading>
-                  <HStack>
+                  <Box>
                     {career.skill.map((s) => {
                       return (
-                        <Tag size="md" variant="solid" colorScheme="teal">
+                        <Tag size="md" variant="solid" colorScheme="teal" m="5px">
                           {s}
                         </Tag>
                       )
                     })}
-                  </HStack>
+                  </Box>
                 </Box>
               </CardBody>
             </Card>
           )
         })}
-      </SimpleGrid>
+      </VStack>
     </VStack>
   )
 }

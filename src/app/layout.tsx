@@ -9,16 +9,14 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
     <html lang="ja">
       <body>
         <Providers>
-          <Box bg={'teal.50'} h="100%" w="100%">
-            <Center>
-              <VStack w="80vw">
-                <Box h="100px">
-                  <Header />
-                </Box>
+          <Box bg={'teal.50'} h="100%" w="100vw">
+            <VStack>
+              <Header />
 
-                <Box h="calc(100vh - 100px)">{children}</Box>
-              </VStack>
-            </Center>
+              <Box h="calc(100vh - 100px)" w="calc(100vw - 500px)">
+                {children}
+              </Box>
+            </VStack>
           </Box>
         </Providers>
       </body>

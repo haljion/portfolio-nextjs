@@ -1,18 +1,65 @@
 'use client'
+
 import type { NextPage } from 'next'
+import { useRouter } from 'next/navigation'
 import React from 'react'
 
-import { VStack, Text, Box, Button } from '../components/common'
+import { VStack, Text, Card, CardBody, Heading, Image, HStack } from '../components/common'
 
 const Home: NextPage = () => {
+  const router = useRouter()
+
   return (
     <>
       <VStack>
-        <Box bg={{ base: 'red.200', md: 'green.200' }}>test</Box>
-        <Text>Welcome to haljion's portfolio!</Text>
-        <Button href="/aboutme" colorScheme="teal" as="a">
-          MORE ABOUT ME!
-        </Button>
+        <Heading as="h2" size="3xl" noOfLines={1} color={'teal.800'}>
+          haljion's portfolio
+        </Heading>
+        <Card
+          onClick={() => {
+            router.push('/aboutme')
+          }}
+          cursor="pointer"
+          w="100%"
+          margin="20px"
+        >
+          <CardBody>
+            <HStack>
+              <Image src="/img/icon.png" alt="aboutme" />
+              <Text>プロフィール・スキル</Text>
+            </HStack>
+          </CardBody>
+        </Card>
+        <Card
+          onClick={() => {
+            router.push('/career')
+          }}
+          cursor="pointer"
+          w="100%"
+          margin="20px"
+        >
+          <CardBody>
+            <HStack>
+              <Image src="/img/icon.png" h="100px" w="100px" alt="career" />
+              <Text>経歴</Text>
+            </HStack>
+          </CardBody>
+        </Card>
+        <Card
+          onClick={() => {
+            router.push('/products')
+          }}
+          cursor="pointer"
+          w="100%"
+          margin="20px"
+        >
+          <CardBody>
+            <HStack>
+              <Image src="/img/icon.png" alt="products" />
+              <Text>制作物</Text>
+            </HStack>
+          </CardBody>
+        </Card>
       </VStack>
     </>
   )

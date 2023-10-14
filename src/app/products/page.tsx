@@ -26,10 +26,10 @@ const Products: NextPage = () => {
         <Heading as="h2" size="3xl" noOfLines={1} color={'teal.800'}>
           Products
         </Heading>
-        <SimpleGrid columns={{ lg: 2, md: 1 }} spacingX="20px" spacingY="20px">
+        <Box>
           {productList.map((product, index) => {
             return (
-              <Card key={index}>
+              <Card key={index} m="5px">
                 <CardHeader>
                   <VStack>
                     <Heading as="h3" size="lg">
@@ -72,7 +72,7 @@ const Products: NextPage = () => {
               </Card>
             )
           })}
-        </SimpleGrid>
+        </Box>
       </VStack>
     </>
   )
