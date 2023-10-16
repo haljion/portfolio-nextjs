@@ -4,7 +4,17 @@ import type { NextPage } from 'next'
 import { useRouter } from 'next/navigation'
 import React from 'react'
 
-import { VStack, Text, Card, CardBody, Heading, Image, HStack } from '../components/common'
+import {
+  VStack,
+  Text,
+  Card,
+  CardBody,
+  Heading,
+  Image,
+  HStack,
+  CalendarIcon,
+} from '../components/common'
+import { pageList } from '../consts/pageData'
 
 const Home: NextPage = () => {
   const router = useRouter()
@@ -15,51 +25,27 @@ const Home: NextPage = () => {
         <Heading as="h2" size="3xl" noOfLines={1} color={'teal.800'}>
           haljion's portfolio
         </Heading>
-        <Card
-          onClick={() => {
-            router.push('/aboutme')
-          }}
-          cursor="pointer"
-          w="100%"
-          margin="20px"
-        >
-          <CardBody>
-            <HStack>
-              <Image src="/img/icon.png" alt="aboutme" />
-              <Text>プロフィール・スキル</Text>
-            </HStack>
-          </CardBody>
-        </Card>
-        <Card
-          onClick={() => {
-            router.push('/career')
-          }}
-          cursor="pointer"
-          w="100%"
-          margin="20px"
-        >
-          <CardBody>
-            <HStack>
-              <Image src="/img/icon.png" h="100px" w="100px" alt="career" />
-              <Text>経歴</Text>
-            </HStack>
-          </CardBody>
-        </Card>
-        <Card
-          onClick={() => {
-            router.push('/products')
-          }}
-          cursor="pointer"
-          w="100%"
-          margin="20px"
-        >
-          <CardBody>
-            <HStack>
-              <Image src="/img/icon.png" alt="products" />
-              <Text>制作物</Text>
-            </HStack>
-          </CardBody>
-        </Card>
+        {pageList.map((page) => {
+          return (
+            <Card
+              onClick={() => {
+                router.push(page.link)
+              }}
+              cursor="pointer"
+              w="100%"
+              margin="20px"
+            >
+              <CardBody>
+                <HStack>
+                  {page.icon == 'calendar' ? <CalendarIcon h="70px" w="70px" /> : <></>}
+                  <Heading as="h2" size="2xl">
+                    {page.title}
+                  </Heading>
+                </HStack>
+              </CardBody>
+            </Card>
+          )
+        })}
       </VStack>
     </>
   )

@@ -17,6 +17,8 @@ import {
   Text,
   SimpleGrid,
   Box,
+  Link,
+  ExternalLinkIcon,
 } from '../../components/common'
 
 const Products: NextPage = () => {
@@ -51,23 +53,36 @@ const Products: NextPage = () => {
                     <Heading as="h4" size="md">
                       使用技術
                     </Heading>
-                    <HStack>
+                    <Box>
                       {product.skill.map((s) => {
                         return (
-                          <Tag size="md" variant="solid" colorScheme="teal">
+                          <Tag size="md" variant="solid" colorScheme="teal" m="5px">
                             {s}
                           </Tag>
                         )
                       })}
-                    </HStack>
+                    </Box>
                   </Box>
                 </CardBody>
 
                 <CardFooter>
-                  <VStack>
-                    <Text>{product.git}</Text>
-                    <Text>{product.url}</Text>
-                  </VStack>
+                  {product.git.map((g) => {
+                    return (
+                      <>
+                        <img
+                          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                          height="30px"
+                          width="30px"
+                        />
+                        <Link href={g} color="teal.500" marginRight="20px" isExternal>
+                          リポジトリ
+                          <ExternalLinkIcon mx="2px" />
+                        </Link>
+                      </>
+                    )
+                  })}
+
+                  <Text>{product.url}</Text>
                 </CardFooter>
               </Card>
             )
