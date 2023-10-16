@@ -22,12 +22,12 @@ import {
   Box,
   Button,
   ButtonGroup,
+  Link,
+  CardFooter,
 } from '../../components/common'
 import { certificationList, skillList } from '../../consts/pageData'
-import { useRouter } from 'next/navigation'
 
 const AboutMe: NextPage = () => {
-  const router = useRouter()
   return (
     <>
       <VStack>
@@ -42,6 +42,16 @@ const AboutMe: NextPage = () => {
             <Text>2018年よりWebアプリケーション開発を中心としたエンジニアとして活動。</Text>
             <Text>直近では機械学習の分野に興味を持ち、積極的に学習中。</Text>
           </CardBody>
+          <CardFooter>
+            <Box>
+              <Link href="/career" color="teal.500" marginRight="20px">
+                経歴を見る
+              </Link>
+              <Link href="/study" color="teal.500">
+                学習内容を見る
+              </Link>
+            </Box>
+          </CardFooter>
         </Card>
 
         <Card w="100%">
@@ -71,35 +81,44 @@ const AboutMe: NextPage = () => {
               <Heading as="h5" size="sm">
                 業務経験あり
               </Heading>
-              <SimpleGrid minChildWidth="100px" spacingX="10px" spacingY="5px">
+              <Box>
+                {' '}
                 {skillList.map((skill) => {
                   return skill.id == 1 ? (
-                    <Tag size="md" variant="solid" colorScheme="teal">
+                    <Tag size="md" variant="solid" colorScheme="teal" m="5px">
                       <TagLabel>{skill.name}</TagLabel>
                     </Tag>
                   ) : (
                     <></>
                   )
                 })}
-              </SimpleGrid>
+              </Box>
             </Box>
             <Box padding={'10px'}>
               <Heading as="h5" size="sm">
                 使用経験あり
               </Heading>
-              <SimpleGrid minChildWidth="100px" spacingX="10px" spacingY="5px">
+
+              <Box>
                 {skillList.map((skill) => {
                   return skill.id == 2 ? (
-                    <Tag size="md" variant="solid" colorScheme="teal">
-                      <TagLabel>{skill.name}</TagLabel>
+                    <Tag size="md" variant="solid" colorScheme="teal" m="5px">
+                      {skill.name}
                     </Tag>
                   ) : (
                     <></>
                   )
                 })}
-              </SimpleGrid>
+              </Box>
             </Box>
           </CardBody>
+          <CardFooter>
+            <Box>
+              <Link href="/products" color="teal.500" marginRight="20px">
+                制作物を見る
+              </Link>
+            </Box>
+          </CardFooter>
         </Card>
 
         <Card w="100%">

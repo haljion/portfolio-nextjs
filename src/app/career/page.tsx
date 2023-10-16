@@ -16,6 +16,7 @@ import {
   Box,
   SimpleGrid,
   Stack,
+  TimeIcon,
 } from '../../components/common'
 
 const Career: NextPage = () => {
@@ -33,7 +34,12 @@ const Career: NextPage = () => {
                   <Heading as="h4" size="md">
                     {career.name}
                   </Heading>
-                  <Text fontSize="md">{career.period}</Text>
+                  <Box>
+                    <Text fontSize="md">
+                      <TimeIcon marginEnd="5px" />
+                      <>{career.period}</>
+                    </Text>
+                  </Box>
                 </VStack>
               </CardHeader>
               <CardBody>

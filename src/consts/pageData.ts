@@ -1,3 +1,10 @@
+export const pageList = [
+  { title: 'プロフィール・スキル', link: '/aboutme', icon: 'calendar' },
+  { title: '経歴', link: '/career', icon: 'calendar' },
+  { title: '学習内容', link: '/study', icon: 'calendar' },
+  { title: '制作物', link: '/products', icon: 'calendar' },
+]
+
 // 資格
 export const certificationList = [
   { id: 1, name: 'Java Silver 8', acquisitionDate: '2018/06' },
@@ -170,7 +177,10 @@ export const productList = [
     img: '/img/product_sample.jpg',
     detail: 'ゲーム「ポケットモンスター」の対戦用育成個体管理アプリ',
     skill: ['React.js', 'TypeScript', 'Django Rest Framework', 'Python', 'Docker', 'AWS'],
-    git: 'aaa',
+    git: [
+      'https://github.com/haljion/pokemanage_react',
+      'https://github.com/haljion/pokemanage_api',
+    ],
     url: 'aaa',
   },
   {
@@ -179,7 +189,48 @@ export const productList = [
     img: '/img/product_sample.jpg',
     detail: 'ポートフォリオサイト',
     skill: ['Next.js', 'React.js', 'TypeScript', 'Docker'],
-    git: 'https://github.com/haljion/portfolio-nextjs',
+    git: ['https://github.com/haljion/portfolio-nextjs'],
     url: '',
+  },
+]
+
+export const studyList = [
+  {
+    title: 'Python実践データ分析100本ノック',
+    tags: ['書籍', 'データ分析・AI'],
+    Description:
+      'Numpy、Pandas、Matplotlibによるデータ分析・前処理を中心に、機械学習による予測や最適化問題、画像処理(OpenCV)・自然言語処理(Mecab)等を実践的に学習。データ処理・機械学習の具体的な実装の流れを理解し、習得することができた、',
+    link: 'https://www.shuwasystem.co.jp/book/b497338.html',
+    git: 'https://github.com/haljion/stydy_0001',
+  },
+  {
+    title: '統計学',
+    tags: ['Webサイト', 'データ分析・AI'],
+    Description:
+      'Webサイト「統計学の時間」を中心に、データ分析・AIに必要な統計学を学習。統計検定2級を取得。',
+    link: 'https://bellcurve.jp/statistics/course/',
+    git: 'https://github.com/haljion/study_0002',
+  },
+  {
+    title: '機械学習のエッセンス',
+    tags: ['書籍', 'データ分析・AI'],
+    Description:
+      'scikit-learn等に実装されている回帰やSVM等のアルゴリズム、およびその前提となる数学・統計処理をゼロからPythonで実装することにより、アルゴリズムの内容を深く理解し、適切な手法の選択やハイパーパラメータのチューニング等を行う為の知識が身に付いた。',
+    link: 'https://www.sbcr.jp/product/4797393965/',
+    git: 'https://github.com/haljion/study_0003',
+  },
+
+  {
+    title: '人工知能プログラミングのための数学がわかる本',
+    tags: ['書籍', 'データ分析・AI'],
+    Description:
+      '機械学習に必要な高校〜大学レベルの数学を、学生時代の復習も兼ねて学習。機械学習においてどの数学の分野がどのように活用されているか？を関連付けることにより、後の学習におけるより具体的な機械学習の処理の理解に役立った。',
+    link: 'https://www.kadokawa.co.jp/product/321708000339/',
+  },
+  {
+    title: '人工知能は人間を超えるか ディープラーニングの先にあるもの',
+    tags: ['書籍', 'データ分析・AI'],
+    Description: '人工知能研究の歴史や機械学習・ディープラーニングの概論、AI技術の活用事例を学習。',
+    link: 'https://www.kadokawa.co.jp/product/321410000316/',
   },
 ]
