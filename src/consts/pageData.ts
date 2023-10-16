@@ -40,6 +40,10 @@ export const skillList = [
   },
   {
     id: 1,
+    name: 'Selenium',
+  },
+  {
+    id: 1,
     name: 'PHP',
   },
   {
@@ -71,6 +75,34 @@ export const skillList = [
     name: 'ASP.NET Core',
   },
   {
+    id: 1,
+    name: 'Oracle',
+  },
+  {
+    id: 1,
+    name: 'MySQL',
+  },
+  {
+    id: 1,
+    name: 'PostgreSQL',
+  },
+  {
+    id: 1,
+    name: 'DB2',
+  },
+  {
+    id: 1,
+    name: 'AWS',
+  },
+  {
+    id: 1,
+    name: 'Docker',
+  },
+  {
+    id: 1,
+    name: 'Git',
+  },
+  {
     id: 2,
     name: 'Django',
   },
@@ -84,7 +116,39 @@ export const skillList = [
   },
   {
     id: 2,
+    name: 'Jupyter Notebook',
+  },
+  {
+    id: 2,
     name: 'scikit-learn',
+  },
+  {
+    id: 2,
+    name: 'Ruby',
+  },
+  {
+    id: 2,
+    name: 'Ruby on Rails',
+  },
+  {
+    id: 2,
+    name: 'Google Apps Script',
+  },
+  {
+    id: 2,
+    name: 'R',
+  },
+  {
+    id: 2,
+    name: 'SQLite',
+  },
+  {
+    id: 2,
+    name: 'heroku',
+  },
+  {
+    id: 2,
+    name: 'Vercel',
   },
 ]
 
@@ -92,7 +156,7 @@ export const skillList = [
 export const careerList = [
   {
     name: 'メーカー系/Webアプリケーション開発',
-    period: '2023/05~',
+    period: '2023/05~現在',
     detail: 'カメラと各種クラウドサービスの連携設定を行うユーザ用Webシステムの新規開発',
     process: ['詳細設計', '開発', '単体テスト', '結合テスト'],
     skill: ['Next.js', 'React.js', 'JavaScript', 'Python'],
@@ -182,23 +246,25 @@ export const productList = [
   {
     id: 1,
     name: 'PokeManage',
-    img: '/img/product_sample.jpg',
-    detail: 'ゲーム「ポケットモンスター」の対戦用育成個体管理アプリ',
+    img: '/img/product1.png',
+    detail: 'ゲーム「ポケットモンスター」の対戦用育成個体管理Webアプリケーション',
     skill: ['React.js', 'TypeScript', 'Django Rest Framework', 'Python', 'Docker', 'AWS'],
     git: [
       'https://github.com/haljion/pokemanage_react',
       'https://github.com/haljion/pokemanage_api',
     ],
-    url: 'aaa',
+    url: 'https://www.pokemanage.com/',
+    release: false,
   },
   {
     id: 2,
     name: 'Portfolio',
-    img: '/img/product_sample.jpg',
-    detail: 'ポートフォリオサイト',
-    skill: ['Next.js', 'React.js', 'TypeScript', 'Docker'],
+    img: '/img/product2.png',
+    detail: '制作物や学習内容等を公開するポートフォリオサイト',
+    skill: ['Next.js', 'React.js', 'TypeScript', 'Docker', 'Vercel'],
     git: ['https://github.com/haljion/portfolio-nextjs'],
-    url: '',
+    url: 'https://haljions-portfolio.vercel.app/',
+    release: true,
   },
 ]
 

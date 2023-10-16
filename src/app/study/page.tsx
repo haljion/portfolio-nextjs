@@ -22,12 +22,12 @@ const AboutMe: NextPage = () => {
   return (
     <>
       <VStack>
-        <Heading as="h2" size="3xl" noOfLines={1} color={'teal.800'}>
+        <Heading as="h2" size="3xl" noOfLines={1} color={'teal.800'} my={'20px'} py={'10px'}>
           Study
         </Heading>
-        {studyList.map((s) => {
+        {studyList.map((s, index) => {
           return (
-            <Card w="100%">
+            <Card w="100%" my={'5px'} py={'5px'} key={index}>
               <CardHeader>
                 <Heading size="md">{s.title}</Heading>
                 <Box>

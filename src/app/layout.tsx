@@ -13,11 +13,10 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
       </head>
       <body>
         <Providers>
-          <Box bg={'teal.50'} minHeight="100%" h="100%" w="100%">
+          <Box bgColor={'teal.50'}>
             <VStack>
               <Header />
-
-              <Box h="calc(100vh - 100px)" w="calc(100vw - 500px)">
+              <Box w={{ base: '90vw', md: '70vw', lg: '60vw', xl: '50vw' }} pb="50px">
                 {children}
               </Box>
             </VStack>
