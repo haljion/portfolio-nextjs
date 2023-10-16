@@ -10,16 +10,14 @@ import {
   CardBody,
   CardFooter,
   CardHeader,
-  HStack,
   Heading,
   Tag,
   VStack,
   Text,
-  SimpleGrid,
   Box,
   Link,
-  ExternalLinkIcon,
 } from '../../components/common'
+import { ExternalLinkIcon } from '@chakra-ui/icons'
 
 const Products: NextPage = () => {
   return (

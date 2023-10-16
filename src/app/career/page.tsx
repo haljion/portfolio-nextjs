@@ -8,16 +8,13 @@ import {
   Card,
   CardBody,
   CardHeader,
-  HStack,
   Heading,
   Tag,
   VStack,
   Text,
   Box,
-  SimpleGrid,
-  Stack,
-  TimeIcon,
 } from '../../components/common'
+import { TimeIcon } from '@chakra-ui/icons'
 
 const Career: NextPage = () => {
   return (

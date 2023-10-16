@@ -6,28 +6,17 @@ import {
   Card,
   CardBody,
   CardHeader,
-  HStack,
   Heading,
   Tag,
   VStack,
   Text,
-  Avatar,
-  List,
-  ListIcon,
-  ListItem,
-  TagLabel,
-  TagLeftIcon,
-  ChatIcon,
-  SimpleGrid,
   Box,
-  Button,
-  ButtonGroup,
   CardFooter,
   Link,
-  ExternalLinkIcon,
 } from '../../components/common'
 import React from 'react'
 import { studyList } from '../../consts/pageData'
+import { ExternalLinkIcon } from '@chakra-ui/icons'
 
 const AboutMe: NextPage = () => {
   return (
