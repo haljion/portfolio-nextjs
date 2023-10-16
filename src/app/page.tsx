@@ -19,6 +19,7 @@ import {
   ButtonGroup,
   Link,
   CardFooter,
+  Image,
 } from '../components/common'
 import { certificationList, skillList } from '../consts/pageData'
 import React from 'react'
@@ -28,10 +29,14 @@ const AboutMe: NextPage = () => {
   return (
     <>
       <VStack>
-        <Heading as="h2" size="3xl" noOfLines={1} color={'teal.800'}>
+        <Heading as="h2" size="3xl" noOfLines={1} color={'teal.800'} my={'20px'} py={'10px'}>
           About me
         </Heading>
-        <Card w="100%">
+        <Image borderRadius="full" boxSize="200px" src="img/icon.jpeg" alt="@haljion" my={'10px'} />
+        <Text color={'teal.800'} my={'10px'}>
+          @haljion
+        </Text>
+        <Card w="100%" my={'5px'} py={'5px'}>
           <CardHeader>
             <Heading size="md">略歴</Heading>
           </CardHeader>
@@ -51,7 +56,7 @@ const AboutMe: NextPage = () => {
           </CardFooter>
         </Card>
 
-        <Card w="100%">
+        <Card w="100%" my={'5px'} py={'5px'}>
           <CardHeader>
             <Heading size="md">保有資格</Heading>
           </CardHeader>
@@ -69,7 +74,7 @@ const AboutMe: NextPage = () => {
           </CardBody>
         </Card>
 
-        <Card w="100%">
+        <Card w="100%" my={'5px'} py={'5px'}>
           <CardHeader>
             <Heading size="md">スキル</Heading>
           </CardHeader>
@@ -118,7 +123,7 @@ const AboutMe: NextPage = () => {
           </CardFooter>
         </Card>
 
-        <Card w="100%">
+        <Card w="100%" my={'5px'} py={'5px'}>
           <CardHeader>
             <Heading size="md">各種リンク</Heading>
           </CardHeader>
