@@ -1,10 +1,9 @@
 import { ReactNode } from 'react'
 
-import { Box, Center, HStack, VStack } from '../components/common'
+import { Box, VStack } from '../components/common'
 import { Providers } from '../components/common/providers'
 import Header from '../components/header'
 import React from 'react'
-import Head from 'next/head'
 
 const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
