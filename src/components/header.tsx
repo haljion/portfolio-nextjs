@@ -19,16 +19,16 @@ const Header: NextPage = () => {
     >
       <ButtonGroup gap="4">
         <Button href="/" colorScheme="teal" as="a">
-          about me
+          About me
         </Button>
         <Button href="/career" colorScheme="teal" as="a">
-          career
+          Career
         </Button>
         <Button href="/study" colorScheme="teal" as="a">
-          study
+          Study
         </Button>
         <Button href="/products" colorScheme="teal" as="a">
-          products
+          Products
         </Button>
       </ButtonGroup>
     </Box>
