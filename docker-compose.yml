@@ -1,0 +1,14 @@
+version: "3"
+services:
+  app:
+    container_name: portfolio-nextjs
+    build:
+      context: .
+    ports:
+      - "8888:3000"
+    volumes:
+      - ./src:/app
+    environment:
+      - WATCHPACK_POLLING=true
+    command: bash -c "yarn dev"
+    tty: true

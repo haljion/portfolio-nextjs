@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "formulahendry.auto-rename-tag",
+    "dsznajder.es7-react-js-snippets",
+    "oderwat.indent-rainbow",
+    "ms-ceintl.vscode-language-pack-ja",
+    "yandeu.five-server",
+    "dbaeumer.vscode-eslint",
+    "vincaslt.highlight-matching-tag",
+    "esbenp.prettier-vscode"
+  ]
+}
